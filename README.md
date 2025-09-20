@@ -9,4 +9,4 @@ Wanna avoid procastination? Tag along!
 
 This is an initial build so stay tuned for new features.
 
-where to use: mahdis-r.github.io/pomodoro-todo-list
+where to use: https://mahdis-r.github.io/pomodoro-todo-list
