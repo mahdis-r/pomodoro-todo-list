@@ -24,7 +24,3 @@ jobs:
           if [ ! -f script.js ]; then echo "Error: script.js not found!"; exit 1; fi
           echo "Files are present. CI check passed."
 
-      - name: Linting (Optional: for more advanced projects)
-        run: |
-          # This step would run a linter like ESLint to check for code style issues
-          echo "Running linter... (placeholder)"
