@@ -1,0 +1,30 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Check for common errors
+        run: |
+          echo "Checking for missing files..."
+          if [ ! -f index.html ]; then echo "Error: index.html not found!"; exit 1; fi
+          if [ ! -f style.css ]; then echo "Error: style.css not found!"; exit 1; fi
+          if [ ! -f script.js ]; then echo "Error: script.js not found!"; exit 1; fi
+          echo "Files are present. CI check passed."
+
+      - name: Linting (Optional: for more advanced projects)
+        run: |
+          # This step would run a linter like ESLint to check for code style issues
+          echo "Running linter... (placeholder)"
